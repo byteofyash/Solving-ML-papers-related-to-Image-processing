@@ -52,6 +52,6 @@ Doctors use GSM to assess stroke risk (GSM < 25 = Vulnerable). The paper warned 
 
 ## 🚀 How to Run
 The code is contained in a single Jupyter Notebook optimized for Kaggle/Google Colab environments.
-1. Download the [Carotid Ultrasound Images Dataset]([https://www.kaggle.com/](https://www.kaggle.com/datasets/orvile/carotid-ultrasound-images)) from Kaggle.
+1. Download the [Carotid Ultrasound Images Dataset](https://www.kaggle.com/datasets/orvile/carotid-ultrasound-images) from Kaggle.
 2. Ensure file paths in the notebook point to the `/US images/` and `/Expert mask images/` directories.
 3. Run the notebook top-to-bottom. The custom Checkpoint callback will save generator weights safely during training.
