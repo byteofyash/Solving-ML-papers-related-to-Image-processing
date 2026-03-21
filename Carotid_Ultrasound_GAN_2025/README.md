@@ -39,14 +39,16 @@ Doctors use GSM to assess stroke risk (GSM < 25 = Vulnerable). The paper warned 
 * **Result:** The AI visually improved the images, but mathematically caused **48.0% of patients to be re-classified** into the high-risk stroke category, perfectly validating the core warning of the published research.
 
 ## 📸 Visualizations
-*(Upload your images to an `images/` folder and link them here!)*
 
 ### 1. Image Harmonization
-`![Harmonization Results](images/adaptation_5_results.png)`
-`![Harmonization Results](images/adaptation_10_results.png)`
+![Harmonization Results](adaptation_5_results.png)
+![Harmonization Results](adaptation_10_results.png)
 
 ### 2. Anatomical Preservation (SSIM Pixel Map)
-`![SSIM Map](images/paper_figure_7_replication.png)`
+![SSIM Map](paper_figure_7_replication.png)
+
+### 3. Medical Risk Marker (Contrast ROI)
+![Medical ROI](medical_roi_masks.png)
 
 ## 🚀 How to Run
 The code is contained in a single Jupyter Notebook optimized for Kaggle/Google Colab environments.
