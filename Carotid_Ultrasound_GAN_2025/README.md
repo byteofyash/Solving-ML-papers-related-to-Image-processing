@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)
 
-An unofficial, from-scratch implementation of the 2025 medical AI research paper: **"A domain adaptation model for carotid ultrasound: Image harmonization, noise reduction, and impact on cardiovascular risk markers"**.
+An unofficial, from-scratch implementation of the 2025 medical AI research paper: **["A domain adaptation model for carotid ultrasound: Image harmonization, noise reduction, and impact on cardiovascular risk markers"](https://www.sciencedirect.com/science/article/pii/S0010482525003816)**.
 
 This project implements an unpaired image-to-image translation Generative Adversarial Network (GAN) designed to harmonize ultrasound textures and reduce reverberation noise while perfectly preserving patient anatomy. Furthermore, it replicates the paper's clinical warning: proving that while AI improves visual quality, it can dangerously alter downstream medical diagnostic formulas.
 
