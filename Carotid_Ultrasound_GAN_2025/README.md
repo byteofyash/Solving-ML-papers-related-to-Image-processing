@@ -1,21 +1,20 @@
 # Domain Adaptation for Carotid Ultrasound using Dual-Discriminator GAN
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15+-orange.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)
 
 An unofficial, from-scratch implementation of the 2025 medical AI research paper: **"A domain adaptation model for carotid ultrasound: Image harmonization, noise reduction, and impact on cardiovascular risk markers"**.
 
 This project implements an unpaired image-to-image translation Generative Adversarial Network (GAN) designed to harmonize ultrasound textures and reduce reverberation noise while perfectly preserving patient anatomy. Furthermore, it replicates the paper's clinical warning: proving that while AI improves visual quality, it can dangerously alter downstream medical diagnostic formulas.
 
 ## 🧠 Architecture & Mathematical Implementation
-This repository contains a fully custom architecture built in TensorFlow/Keras:
-* **Generator:** A 15-block ResNet with **Instance Normalization** (via GroupNorm) to maintain spatial stability.
+This repository contains a fully custom architecture built in PyTorch:
+* **Generator:** A 15-block ResNet with native **Instance Normalization** to maintain spatial stability.
 * **Dual Discriminators:** Two separate CNN discriminators ($D_c$ and $D_n$) to independently judge anatomical content and high-frequency noise/texture.
 * **Custom Loss Functions:**
   * **Adversarial Loss:** Standard Binary Crossentropy.
   * **Content Loss:** $L_1$ distance computed on deep feature maps extracted from the final layers of the Generator, ensuring the physical shapes (arteries/plaques) do not shift.
   * **Noise/Style Loss:** A Gram Matrix implementation mapped to a Wasserstein-distance approximation, computed on the *early* layers of the Generator to transfer fine-grained speckle noise and texture.
-  * **Mixed Precision:** Implemented `float16` scaling with customized matrix normalization to prevent gradient overflow during Gram Matrix multiplication.
 
 ## 📊 Quantitative Results (Computer Vision)
 Evaluated on a Kaggle dataset of Carotid Artery Ultrasounds, the model successfully demonstrated strong anatomical preservation.
